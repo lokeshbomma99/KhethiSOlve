@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soil Laboratories</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .lab-card {
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .lab-logo {
+      max-height: 150px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+      height: 100px;
+      width: 100px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .footer {
+      background-color: #1a1a1a;
+      color: #fff;
+      background-color: #111;
+      padding: 40px 0;
+    }
+    .footer .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .footer .logo span {
+      color: #76c043;
+    }
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    .footer-links a:hover {
+      color: #76c043;
+    }
+    .footer-news .date {
+      color: #f3c623;
+    }
+    .footer-news .news-title {
+      color: #fff;
+      margin-bottom: 5px;
+    }
+    .footer-news .news-title:hover {
+      text-decoration: underline;
+    }
+    .social-icons a {
+      color: #ccc;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+    .social-icons a:hover {
+      color: #76c043;
+    }
+    .footer-contact input {
+      background-color: #222;
+      border: 1px solid #444;
+      color: #fff;
+    }
+    .footer-contact input:focus {
+      border-color: #76c043;
+      outline: none;
+    }
+    .footer-contact button {
+      background-color: #76c043;
+      color: #fff;
+      border: none;
+    }
+    .footer-contact button:hover {
+      background-color: #5ca034;
+    }
+    .copyright {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #0d0d0d;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo (2).png" alt="KhethiSolve Logo" width="30" height="30" class="d-inline-block align-text-top">
+        KhethiSolve
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="soil.html">Soil Lab</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="schemes.html">Schemes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="weather.html">Weather</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-primary text-white py-4">
+    <div class="container text-center">
+      <h1>Soil Laboratories</h1>
+      <p>Find the best soil testing labs for your needs</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container my-4">
+    <div id="labsContainer" class="row">
+      <!-- Soil lab cards will appear here -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="logo">Agrios<span>.</span></h4>
+          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+          <div class="social-icons">
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-pinterest"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 footer-links">
+          <h5>Explore</h5>
+          <a href="#">About</a><br>
+          <a href="#">soil-lab</a><br>
+          <a href="#">Schemas</a><br>
+          <a href="#">Weather</a><br>
+          <a href="#">Contact</a>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4 footer-news">
+          <h5>News</h5>
+          <div>
+            <p class="news-title"><a href="#">Bringing Food Production Back to Cities</a></p>
+            <p class="date">July 5, 2022</p>
+          </div>
+          <div>
+            <p class="news-title"><a href="#">The Future of Farming, Smart Irrigation Solutions</a></p>
+            <p class="date">July 5, 2022</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h5>Contact</h5>
+          <p><i class="bi bi-telephone"></i> 666 888 0000</p>
+          <p><i class="bi bi-envelope"></i> needhelp@company.com</p>
+          <p><i class="bi bi-geo-alt"></i> 80 Brooklyn Golden Street, New York, USA</p>
+          <div class="input-group mt-3">
+            <input type="text" class="form-control" placeholder="Your Email Address">
+            <button class="btn" type="button"><i class="bi bi-send"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      © All Copyright 2024 by Shawonetc Themes |
+      <a href="#" class="text-decoration-none">Terms of Use</a> |
+      <a href="#" class="text-decoration-none">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <script>
+    const soilLabs = [
+      {
+        name: "Green Valley Lab",
+        location: "123 Green Street, Springfield",
+        type: "Nitrogen, pH, Organic Matter",
+        logo: "https://img.freepik.com/premium-vector/laboratory-logo-design-vector-illustration_1236506-193.jpg?semt=ais_hybrid",
+      },
+      {
+        name: "AgriTest Lab",
+        location: "456 Farming Lane, Riverside",
+        type: "Micronutrients, Salinity, Texture Analysis",
+        logo: "https://img.freepik.com/premium-vector/laboratory-logo-design-vector-illustration_1236506-193.jpg?semt=ais_hybrid",
+      },
+      {
+        name: "SoilCheck Center",
+        location: "789 Crop Circle, Harvest Town",
+        type: "Phosphorus, Potassium, Water Retention",
+        logo: "https://img.freepik.com/premium-vector/laboratory-logo-design-vector-illustration_1236506-193.jpg?semt=ais_hybrid",
+      },
+    ];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const labsContainer = document.getElementById('labsContainer');
+      labsContainer.innerHTML = '';
+
+      soilLabs.forEach(lab => {
+        const labCard = document.createElement('div');
+        labCard.className = 'col-md-4';
+
+        labCard.innerHTML = `
+          <div class="card lab-card">
+            <div class="card-body">
+              <img src="${lab.logo}" alt="${lab.name} Logo" class="lab-logo">
+              <h5 class="card-title">${lab.name}</h5>
+              <p class="card-text"><strong>Location:</strong> ${lab.location}</p>
+              <p class="card-text"><strong>Soil Tests:</strong> ${lab.type}</p>
+            </div>
+          </div>
+        `;
+
+        labsContainer.appendChild(labCard);
+      });
+    });
+  </script>
+</body>
+</html>

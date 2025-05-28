@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KhethiSolve</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .hero-section {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .hero-section img {
+            width: 100%;
+            height: auto;
+        }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 0 15px;
+        }
+        .hero-content h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .hero-content p {
+            font-size: 1rem;
+            margin: 20px 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+        .hero-content .btn {
+            font-size: 1rem;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .hero-content .btn:hover {
+            background-color: #218838;
+            color: white;
+        }
+        .search-bar {
+            margin-top: 20px;
+        }
+        .search-bar input {
+            width: 70%;
+            max-width: 400px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+        .search-bar button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #218838;
+        }
+
+
+
+        .offer-section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .offer-section h3 {
+            color: #000;
+            font-weight: 700;
+            font-size: 2rem;
+        }
+
+        .offer-section p {
+            color: #ffbf00;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .icon {
+            position: absolute;
+            top: -25px;
+            left: 20px;
+            background-color: #d8e65e;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        .icon img {
+            width: 30px;
+            height: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .card img {
+                height: 150px;
+            }
+        }
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .hero-content p {
+                font-size: 0.9rem;
+            }
+            .hero-content .btn {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+            .search-bar input {
+                width: 60%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-content h1 {
+                font-size: 1rem;
+            }
+            .hero-content p {
+                font-size: 0.5rem;
+            }
+            .hero-content .btn {
+                font-size: 0.5rem;
+                padding: 6px 12px;
+            }
+            .search-bar input {
+                width: 50%;
+            }
+        }
+
+
+        .product-section {
+            padding: 50px 0;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100%;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .product-card .card-body {
+            text-align: center;
+        }
+
+        .product-card .product-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .product-card .product-price {
+            font-size: 1rem;
+            color: #28a745;
+            margin-top: 5px;
+        }
+
+        .product-card .product-rating {
+            color: #ffc107;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        .footer {
+            background-color: #1a1a1a;
+      color: #fff;
+
+      background-color: #111;
+      padding: 40px 0;
+    }
+    .footer .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .footer .logo span {
+      color: #76c043;
+    }
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    .footer-links a:hover {
+      color: #76c043;
+    }
+    .footer-news .date {
+      color: #f3c623;
+    }
+    .footer-news .news-title {
+      color: #fff;
+      margin-bottom: 5px;
+    }
+    .footer-news .news-title:hover {
+      text-decoration: underline;
+    }
+    .social-icons a {
+      color: #ccc;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+    .social-icons a:hover {
+      color: #76c043;
+    }
+    .footer-contact input {
+      background-color: #222;
+      border: 1px solid #444;
+      color: #fff;
+    }
+    .footer-contact input:focus {
+      border-color: #76c043;
+      outline: none;
+    }
+    .footer-contact button {
+      background-color: #76c043;
+      color: #fff;
+      border: none;
+    }
+    .footer-contact button:hover {
+      background-color: #5ca034;
+    }
+    .copyright {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #0d0d0d;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ccc;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo (2).png" alt="KhethiSolve Logo" width="30" height="30" class="d-inline-block align-text-top">
+                KhethiSolve
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="soil.html">Soil Lab</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="schemes.html">Schemes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="weather.html">Weather</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- Hero Section -->
+<div class="hero-section">
+    <img src="images/background.png" alt="Agriculture and Eco Farming">
+    <div class="hero-content">
+        <h1>Agriculture & Eco Farming</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+        <div class="search-bar">
+            <input type="text" placeholder="Search here...">
+            <button type="button">Search</button>
+        </div>    </div>
+</div>
+<section class="offer-section">
+    <p>Our Services</p>
+    <h3>What We Offer</h3>
+
+    <div class="container">
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="card position-relative">
+                    <img src="images/01.png" alt="Agriculture Products" class="card-img-top">
+                    <div class="icon">
+                        <img src="images/01-icon (1).png" alt="Icon">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Agriculture Products</h5>
+                        <p class="card-text">Lorem ipsum is simply free available. Aenean leo quam. Pellentesque semornare vestibulum.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="card position-relative">
+                    <img src="images/02.png" alt="Organic Products" class="card-img-top">
+                    <div class="icon">
+                        <img src="images/02-icon.png" alt="Icon">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Organic Products</h5>
+                        <p class="card-text">Lorem ipsum is simply free available. Aenean leo quam. Pellentesque semornare vestibulum.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card position-relative">
+                    <img src="images/03.png" alt="Dairy Products" class="card-img-top">
+                    <div class="icon">
+                        <img src="images/03-icon.png" alt="Icon">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Dairy Products</h5>
+                        <p class="card-text">Lorem ipsum is simply free available. Aenean leo quam. Pellentesque semornare vestibulum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- product sectoion -->
+<section class="product-section">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Products</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="images/onion.png" alt="Onions">
+                    <div class="card-body">
+                        <p class="product-name">Onions</p>
+                        <p class="product-price">20.00/kg</p>
+                        <p class="product-rating">★★★★★</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="images/carrot.png" alt="Carrot">
+                    <div class="card-body">
+                        <p class="product-name">Carrot</p>
+                        <p class="product-price"> 50.00/kg</p>
+                        <p class="product-rating">★★★★★</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="images/tamato.png" alt="Tomato">
+                    <div class="card-body">
+                        <p class="product-name">Tomato</p>
+                        <p class="product-price"> 50.00/kg</p>
+                        <p class="product-rating">★★★★★</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="images/red-grapes.png" alt="Red Grapes">
+                    <div class="card-body">
+                        <p class="product-name">Red Grapes</p>
+                        <p class="product-price"> 100.00/kg</p>
+                        <p class="product-rating">★★★★★</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="images/garlic.png" alt="Garlic">
+                    <div class="card-body">
+                        <p class="product-name">Garlic</p>
+                        <p class="product-price"> 20.00/kg</p>
+                        <p class="product-rating">★★★★★</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="images/lettuce.png" alt="Lettuce">
+                    <div class="card-body">
+                        <p class="product-name">Lettuce</p>
+                        <p class="product-price">30.00/kg</p>
+                        <p class="product-rating">★★★★★</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="logo">Agrios<span>.</span></h4>
+          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+          <div class="social-icons">
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-pinterest"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 footer-links">
+          <h5>Explore</h5>
+          <a href="#">About</a><br>
+          <a href="#">soil-lab</a><br>
+          <a href="#">Schemas</a><br>
+          <a href="#">Weather</a><br>
+          <a href="#">Contact</a>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4 footer-news">
+          <h5>News</h5>
+          <div>
+            <p class="news-title"><a href="#">Bringing Food Production Back to Cities</a></p>
+            <p class="date">July 5, 2022</p>
+          </div>
+          <div>
+            <p class="news-title"><a href="#">The Future of Farming, Smart Irrigation Solutions</a></p>
+            <p class="date">July 5, 2022</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h5>Contact</h5>
+          <p><i class="bi bi-telephone"></i> 666 888 0000</p>
+          <p><i class="bi bi-envelope"></i> needhelp@company.com</p>
+          <p><i class="bi bi-geo-alt"></i> 80 Brooklyn Golden Street, New York, USA</p>
+          <div class="input-group mt-3">
+            <input type="text" class="form-control" placeholder="Your Email Address">
+            <button class="btn" type="button"><i class="bi bi-send"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      © All Copyright 2024 by Shawonetc Themes | <a href="#" class="text-decoration-none">Terms of Use</a> | <a href="#" class="text-decoration-none">Privacy Policy</a>
+    </div>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

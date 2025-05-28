@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Soil Laboratories</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .about-section {
+      padding: 2rem;
+      background-color: #f8f9fa;
+      margin-bottom: 2rem;
+    }
+    .feedback-form {
+      background-color: #e9ecef;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+   
+    .footer {
+            background-color: #1a1a1a;
+      color: #fff;
+
+      background-color: #111;
+      padding: 40px 0;
+    }
+    .footer .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .footer .logo span {
+      color: #76c043;
+    }
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    .footer-links a:hover {
+      color: #76c043;
+    }
+    .footer-news .date {
+      color: #f3c623;
+    }
+    .footer-news .news-title {
+      color: #fff;
+      margin-bottom: 5px;
+    }
+    .footer-news .news-title:hover {
+      text-decoration: underline;
+    }
+    .social-icons a {
+      color: #ccc;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+    .social-icons a:hover {
+      color: #76c043;
+    }
+    .footer-contact input {
+      background-color: #222;
+      border: 1px solid #444;
+      color: #fff;
+    }
+    .footer-contact input:focus {
+      border-color: #76c043;
+      outline: none;
+    }
+    .footer-contact button {
+      background-color: #76c043;
+      color: #fff;
+      border: none;
+    }
+    .footer-contact button:hover {
+      background-color: #5ca034;
+    }
+    .copyright {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #0d0d0d;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo (2).png" alt="KhethiSolve Logo" width="30" height="30" class="d-inline-block align-text-top">
+                KhethiSolve
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="soil.html">Soil Lab</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="schemes.html">Schemes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="weather.html">Weather</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <!-- About Us Section -->
+  <section class="about-section">
+    <div class="container">
+      <h2 class="text-center mb-4">About Us</h2>
+      <p class="lead text-center">
+        Welcome to Soil Laboratories! Our platform connects farmers with the best soil testing laboratories to help optimize agricultural practices.
+        Whether you're testing for pH levels, nutrient content, or water retention, we provide accurate results to ensure healthier crops and sustainable farming.
+      </p>
+    </div>
+  </section>
+
+  <!-- Feedback Form Section -->
+  <section class="feedback-form">
+    <div class="container">
+      <h2 class="text-center mb-4">We Value Your Feedback</h2>
+      <form id="feedbackForm">
+        <div class="mb-3">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="mb-3">
+          <label for="feedback" class="form-label">Your Feedback</label>
+          <textarea class="form-control" id="feedback" rows="4" placeholder="Write your feedback here" required></textarea>
+        </div>
+        <div class="mb-3 text-center">
+          <button type="submit" class="btn btn-primary">Submit Feedback</button>
+        </div>
+      </form>
+      <div id="feedbackMessage" class="alert alert-success d-none" role="alert">
+        Thank you for your feedback!
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="logo">Agrios<span>.</span></h4>
+          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+          <div class="social-icons">
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-pinterest"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 footer-links">
+          <h5>Explore</h5>
+          <a href="#">About</a><br>
+          <a href="#">soil-lab</a><br>
+          <a href="#">Schemas</a><br>
+          <a href="#">Weather</a><br>
+          <a href="#">Contact</a>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4 footer-news">
+          <h5>News</h5>
+          <div>
+            <p class="news-title"><a href="#">Bringing Food Production Back to Cities</a></p>
+            <p class="date">July 5, 2022</p>
+          </div>
+          <div>
+            <p class="news-title"><a href="#">The Future of Farming, Smart Irrigation Solutions</a></p>
+            <p class="date">July 5, 2022</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h5>Contact</h5>
+          <p><i class="bi bi-telephone"></i> 666 888 0000</p>
+          <p><i class="bi bi-envelope"></i> needhelp@company.com</p>
+          <p><i class="bi bi-geo-alt"></i> 80 Brooklyn Golden Street, New York, USA</p>
+          <div class="input-group mt-3">
+            <input type="text" class="form-control" placeholder="Your Email Address">
+            <button class="btn" type="button"><i class="bi bi-send"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      © All Copyright 2024 by Shawonetc Themes | <a href="#" class="text-decoration-none">Terms of Use</a> | <a href="#" class="text-decoration-none">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Retrieve form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const feedback = document.getElementById('feedback').value;
+
+      // Show success message
+      const feedbackMessage = document.getElementById('feedbackMessage');
+      feedbackMessage.classList.remove('d-none');
+      
+      // Reset the form
+      document.getElementById('feedbackForm').reset();
+    });
+  </script>
+  
+
+</body>
+</html>
